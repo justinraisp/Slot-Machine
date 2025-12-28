@@ -1,0 +1,140 @@
+{
+  "base": {
+    "symbols": {
+      "A": { "is_wild": false, "is_scatter": false },
+      "B": { "is_wild": false, "is_scatter": false },
+      "C": { "is_wild": false, "is_scatter": false },
+      "W": { "is_wild": true, "is_scatter": false },
+      "S": { "is_wild": false, "is_scatter": true }
+    },
+
+    "reel_sets": [
+      {
+        "weight": 80,
+        "reels": [
+          ["S", "A", "B", "A", "A", "A"],
+          ["W", "S", "W", "W", "S", "W"],
+          ["S", "A", "B", "S", "W", "A"],
+          ["W", "S", "W", "W"],
+          ["A", "B", "W", "W", "A"]
+        ]
+      },
+      {
+        "weight": 20,
+        "reels": [
+          ["A", "A", "B", "W", "C"],
+          ["B", "B", "C", "W", "A"],
+          ["C", "C", "A", "W", "B"],
+          ["B", "B", "C", "W", "A"],
+          ["C", "C", "A", "W", "B"]
+        ]
+      }
+    ],
+
+    "paylines": [
+      [0, 0, 0, 0, 0],
+      [1, 1, 1, 1, 1],
+      [2, 2, 2, 2, 2]
+    ],
+
+    "paytable": {
+      "A": { "3": 10, "4": 20, "5": 50 },
+      "B": { "3": 5, "4": 10, "5": 25 },
+      "C": { "3": 2, "4": 5, "5": 10 },
+      "W": { "3": 20, "4": 40, "5": 100 },
+      "S": { 
+        "3": {
+          "payout": 0,
+          "triggers": {
+            "name": "freespins",
+            "count": 3
+          }
+        },
+        "4": {
+          "payout": 0,
+          "triggers": {
+            "name": "freespins",
+            "count": 5
+          }
+        }
+      }
+    },
+    "window_height": 3
+  },
+  "freespins": {
+    "symbols": {
+      "A": { "is_wild": false, "is_scatter": false },
+      "B": { "is_wild": false, "is_scatter": false },
+      "C": { "is_wild": false, "is_scatter": false },
+      "W": { "is_wild": true, "is_scatter": false },
+      "CP": { "is_wild": false, "is_scatter": false },
+      "S": { "is_wild": false, "is_scatter": true}
+    },
+
+    "reel_sets": [
+      {
+        "weight": 0,
+        "reels": [
+          ["A", "CP", "CP", "CP", "A", "A"],
+          ["W", "W", "CP", "CP", "CP", "W"],
+          ["CP", "CP", "CP", "W", "CP", "A"],
+          ["W", "W", "CP", "CP", "CP", "W"],
+          ["CP", "CP", "CP", "W", "CP", "A"]
+        ]
+      },
+      {
+        "weight": 20,
+        "reels": [
+          ["A", "S", "B", "W", "A", "A", "C"],
+          ["B", "S", "C", "W", "A", "A", "B"],
+          ["C", "S", "A", "A", "A", "W", "B", "A", "A", "A", "W", "B"],
+          ["S", "W", "CP", "CP", "W", "B", "A"],
+          ["CP", "CP", "CP", "W", "CP", "A"]
+        ]
+      }
+    ],
+
+    "paylines": [
+      [0, 0, 0, 0, 0],
+      [1, 1, 1, 1, 1],
+      [2, 2, 2, 2, 2]
+    ],
+
+    "paytable": {
+      "A": { "3": 10 },
+      "B": { "3": 5 },
+      "C": { "3": 2 },
+      "W": { "3": 20 },
+      "S": { 
+        "3": {
+          "payout": 0,
+          "triggers": {
+            "name": "freespins",
+            "count": 3
+          }
+        },
+        "4": {
+          "payout": 0,
+          "triggers": {
+            "name": "freespins",
+            "count": 5
+          }
+        }
+      }
+    },
+
+    "window_height": 3,
+    "customParameters":{
+      "bonusSymbol":"CP",
+      "threshold": 5,
+      "CPWeights": {
+        "1": 10,
+        "2": 10,
+        "3": 15,
+        "5": 5,
+        "10": 5,
+        "100":1
+      }
+    }
+  }
+}
