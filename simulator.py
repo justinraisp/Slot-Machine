@@ -75,8 +75,15 @@ def run_simulation(total_games, bet_amount, num_cores=1, existing_filename=None)
 
     if os.path.exists(abs_path):
         print(f"Nadaljujem simulacijo v datoteki: {abs_path}")
-        with open(abs_path, "r") as f:
-            history = json.load(f)
+        with open(abs_path, "r", encoding='utf-8') as f:
+            data = json.load(f)
+            
+            # Če je datoteka nova (combined), vzamemo samo history del
+            if isinstance(data, dict) and "history" in data:
+                history = data["history"]
+            else:
+                # Če je stara datoteka, so podatki direktno v korenu
+                history = data
     else:
         print(f"Ustvarjam novo simulacijo: {abs_path}")
         history = {
@@ -128,9 +135,9 @@ def run_simulation(total_games, bet_amount, num_cores=1, existing_filename=None)
         "symbol_payouts_rtp": {sym: to_rtp(val) for sym, val in history["symbol_payouts"].items()},
         "confidence_interval 95%": [lower, upper]
     }
-
+    combined = {"history": history, "report": report}
     with open(rtp_path, "w") as f:
-        json.dump(report, f, indent=4)
+        json.dump(combined, f, indent=4)
 
     csv_path = abs_path.replace(".json", ".csv")
     with open(csv_path, mode='w', newline='', encoding='utf-8-sig') as f:
@@ -151,7 +158,7 @@ def run_simulation(total_games, bet_amount, num_cores=1, existing_filename=None)
 
 if __name__ == "__main__":
     # Za novo simulacijo:
-    #run_simulation(total_games=5000000, num_cores=6, bet_amount=1.0)
+    #run_simulation(total_games=5000, num_cores=6, bet_amount=1.0)
     
     # Za nadaljevanje obstoječe:
-    run_simulation(total_games=1000000, bet_amount=1.0, existing_filename="simulacija_20260118_224859_RTP_1000000.json")
+    run_simulation(total_games=10000, bet_amount=1.0, existing_filename="simulacija_20260119_002836_RTP_5000.json")
