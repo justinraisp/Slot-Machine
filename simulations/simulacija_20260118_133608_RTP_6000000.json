@@ -1,0 +1,25 @@
+{
+    "timestamp_last_update": "2026-01-18 13:40:02",
+    "total_games": 6000000,
+    "total_bet": 6000000.0,
+    "total_payout_rtp": 0.95974,
+    "hit_frequency": 0.39089,
+    "standard_deviation": 4.42656,
+    "bonus_trigger_frequency": 0.01098,
+    "bonus_trigger_hitrate": "1 in 91.1",
+    "symbol_payouts_rtp": {
+        "P1": 0.09602,
+        "P2": 0.08939,
+        "P3": 0.08746,
+        "P4": 0.08158,
+        "P5": 0.08279,
+        "P6": 0.09106,
+        "CP": 0.43143,
+        "WILD": 0.0,
+        "SCAT": 0.0
+    },
+    "confidence_interval 95%": [
+        0.9562,
+        0.9633
+    ]
+}
