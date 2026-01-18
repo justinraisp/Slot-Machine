@@ -8,7 +8,6 @@ from Classes.reelSet import ReelSet
 from Classes.payline import Payline
 from Classes.paytable import Paytable
 from Classes.slotMachine import SlotMachine
-from Classes.spinWin import SpinWin
 
 def load_symbols(data: dict) -> dict[str, Symbol]:
     symbols = {}
@@ -44,10 +43,6 @@ def load_paytable(data: dict) -> Paytable:
     return paytable
 
 def spin_machine(machine: SlotMachine, config: dict, bet: float, save_log: bool = True):
-    """
-    Izvede celotno sejo (osnovni spin + morebitni free spini).
-    Vrne slovar z rezultati in ID seje.
-    """
     session_id = str(uuid.uuid4())
     session_data = {
         "session_id": session_id,
@@ -56,8 +51,12 @@ def spin_machine(machine: SlotMachine, config: dict, bet: float, save_log: bool 
         "base_win": 0.0,
         "bonus_win": 0.0,
         "total_payout": 0.0,
-        "spins": []
+        "spins": [],
+        "wins_by_symbol": {name: 0.0 for name in config["base"]["symbols"]},
+        "total_freespins_played": 0
     }
+
+    first_window_matrix = None
 
     def update_machine_config(state):
         used_config = config[state]
@@ -70,25 +69,37 @@ def spin_machine(machine: SlotMachine, config: dict, bet: float, save_log: bool 
         machine.paylines = paylines
         machine.paytable = paytable
         machine.state = state
-        
-        if state == "freespins":
-            machine.custom_parameters = used_config.get("customParameters", {})
-        else:
-            machine.custom_parameters = {}
+        machine.custom_parameters = used_config.get("customParameters", {})
+
     update_machine_config("base")
 
     def single_spin():
-        window = machine.getSymbolWindow()
-        spin_state = machine.state
+        # Uporabimo nonlocal, da lahko pišemo v spremenljivko izven te funkcije
+        nonlocal first_window_matrix 
         
+        window = machine.getSymbolWindow()
+        
+        # Če je to prvi spin v tej seji, si zapomnimo mrežo za UI
+        if first_window_matrix is None:
+            first_window_matrix = window.getMatrix()
+
+        spin_state = machine.state
         total, wins, bonus_trigger = machine.scanMatrix(window, machine.paylines, machine.paytable, bet)
         
         if spin_state == "base":
             session_data["base_win"] += total
         else:
             session_data["bonus_win"] += total
+            session_data["total_freespins_played"] += 1
         
         session_data["total_payout"] += total
+
+        for w in wins:
+            if w.symbols and len(w.symbols) > 0:
+                s = w.symbols[0]
+                sym_name = s.name if hasattr(s, 'name') else str(s)
+                if sym_name in session_data["wins_by_symbol"]:
+                    session_data["wins_by_symbol"][sym_name] += w.payout
 
         spin_log = {
             "state": spin_state,
@@ -100,7 +111,7 @@ def spin_machine(machine: SlotMachine, config: dict, bet: float, save_log: bool 
                     "symbols": [s.name if hasattr(s, 'name') else s for s in w.symbols],
                     "payout": round(w.payout, 2),
                     "positions": w.positions,
-                    "trigger_info": w.triggers if hasattr(w, 'triggers') else None
+                    "triggers": w.triggers
                 } for w in wins
             ],
             "bonus_triggered": {
@@ -113,20 +124,20 @@ def spin_machine(machine: SlotMachine, config: dict, bet: float, save_log: bool 
 
         if bonus_trigger and spin_state == "base":
             update_machine_config("freespins")
-            if save_log:
-                print(f"--- FREE SPINS TRIGGERED: {bonus_trigger['count']} spins ---")
+            machine.remaining_spins = bonus_trigger['count']
 
         if spin_state == "freespins":
             machine.remaining_spins -= 1
             if machine.remaining_spins <= 0:
                 machine.state = "base"
+
     single_spin() 
     while machine.state == "freespins" and machine.remaining_spins > 0:
         single_spin()
 
-    session_data["total_payout"] = round(session_data["total_payout"], 2)
-    session_data["base_win"] = round(session_data["base_win"], 2)
-    session_data["bonus_win"] = round(session_data["bonus_win"], 2)
+    session_data["total_payout"] = round(session_data["total_payout"], 4)
+    session_data["base_win"] = round(session_data["base_win"], 4)
+    session_data["bonus_win"] = round(session_data["bonus_win"], 4)
 
     if save_log:
         save_session_to_json(session_data)
@@ -134,7 +145,9 @@ def spin_machine(machine: SlotMachine, config: dict, bet: float, save_log: bool 
     return {
         "total": session_data["total_payout"],
         "base": session_data["base_win"],
-        "bonus": session_data["bonus_win"]
+        "bonus": session_data["bonus_win"],
+        "all_spins": session_data["spins"],
+        "wins_by_symbol": session_data["wins_by_symbol"]
     }, session_id
   
 def save_session_to_json(data):
@@ -155,10 +168,10 @@ def main():
         return
 
     BET_AMOUNT = 1.0
+    # Inicializacija z dummy reel_sets, ki se bodo naložili v spin_machine
     machine = SlotMachine(reel_sets=[], window_height=config["base"]["window_height"])
     
     outcome, session_id = spin_machine(machine, config, BET_AMOUNT, save_log=True)
-    
     print(f"\n--- KONČNI REZULTAT SEJE ---")
     print(f"ID: {session_id}")
     print(f"Vložek: {BET_AMOUNT}")

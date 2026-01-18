@@ -41,7 +41,7 @@ class SlotMachine:
 
             for row, symbol in enumerate(symbols):
                 symbol_copy = symbol.copy()
-                if self.state == "freespins" and symbol.name == bonus_symbol_base_name and cp_weights:
+                if symbol.name == bonus_symbol_base_name and cp_weights:
                     value = random.choices(list(cp_weights.keys()), weights=list(cp_weights.values()), k=1)[0]
                     symbol_copy.name = f"{bonus_symbol_base_name}_{value}"
                 
@@ -83,16 +83,18 @@ class SlotMachine:
 
             payout = rules.get("payout", 0)
             total_payout += payout
+            trigger_info = rules.get("triggers", None)
+            trigger_name = trigger_info.get("name") if trigger_info else None
             wins.append(SpinWin(
                 type="scatter",
                 symbols=[symbol_name] * count,
                 payout=payout,
                 positions=None, 
-                triggers=rules.get("triggers")
+                triggers=trigger_name
             ))
 
             if "triggers" in rules:
-                bonus_trigger = rules["triggers"]
+                bonus_trigger = trigger_info
 
         return total_payout, wins, bonus_trigger
 
@@ -101,8 +103,6 @@ class SlotMachine:
         Posebna metoda za preverjanje 'Collection' funkcije (CP simboli).
         Ločena od generiranja okna.
         """
-        if self.state != "freespins":
-            return 0.0, None
 
         bonus_symbol_base = self.custom_parameters.get("bonusSymbol", "CP")
         threshold = self.custom_parameters.get("threshold", 0)
@@ -115,7 +115,7 @@ class SlotMachine:
                 if symbol.name.startswith(f"{bonus_symbol_base}_"):
                     try:
                         val_str = symbol.name.split("_")[1]
-                        val = int(val_str)
+                        val = float(val_str)
                         current_cp_count += 1
                         current_cp_payout += val
                     except (IndexError, ValueError):
@@ -165,14 +165,14 @@ class SlotMachine:
         total_payout += actual_scatter_payout
         for sw in scatter_wins:
             sw.payout = sw.payout * bet
+            wins.append(sw)
 
-        if self.state == "freespins":
-            bonus_payout, bonus_win = self._evaluate_collection_feature(window)
-            if bonus_win:
-                actual_bonus_payout = bonus_payout * bet
-                total_payout += actual_bonus_payout
-                bonus_win.payout = actual_bonus_payout
-                wins.append(bonus_win)
+        bonus_payout, bonus_win = self._evaluate_collection_feature(window)
+        if bonus_win:
+          actual_bonus_payout = bonus_payout * bet
+          total_payout += actual_bonus_payout
+          bonus_win.payout = actual_bonus_payout
+          wins.append(bonus_win)
 
         self.pending_wins.extend(wins)
         return total_payout, wins, bonus_trigger

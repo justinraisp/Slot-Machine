@@ -1,125 +1,163 @@
 {
   "base": {
     "symbols": {
-      "A": { "is_wild": false, "is_scatter": false },
-      "B": { "is_wild": false, "is_scatter": false },
-      "C": { "is_wild": false, "is_scatter": false },
-      "W": { "is_wild": true, "is_scatter": false },
-      "S": { "is_wild": false, "is_scatter": true }
+      "P1": { "is_wild": false, "is_scatter": false },
+      "P2": { "is_wild": false, "is_scatter": false },
+      "P3": { "is_wild": false, "is_scatter": false },
+      "P4": { "is_wild": false, "is_scatter": false },
+      "P5": { "is_wild": false, "is_scatter": false },
+      "P6": { "is_wild": false, "is_scatter": false },
+      "CP": { "is_wild": false, "is_scatter": false },
+      "WILD": { "is_wild": true, "is_scatter": false },
+      "SCAT": { "is_wild": false, "is_scatter": true }
     },
 
     "reel_sets": [
       {
-        "weight": 80,
+        "weight": 250,
         "reels": [
-          ["S", "A", "B", "A", "A", "A"],
-          ["W", "S", "W", "W", "S", "W"],
-          ["S", "A", "B", "S", "W", "A"],
-          ["W", "S", "W", "W"],
-          ["A", "B", "W", "W", "A"]
+        [ "P3", "P4", "SCAT", "P6", "P3", "P3", "SCAT", "P2", "P4", "P5", "P5", "P4", "P5", "SCAT", "P6", "P6", "P5", "P3", "P5", "P4", "SCAT", "P6", "P3", "P6", "P3", "P4", "P5", "CP", "CP", "P2", "SCAT", "P6", "P5", "CP", "CP", "P6", "P3", "P4", "P3", "P3", "CP", "P4", "P2", "P5", "P6", "CP", "P5", "P6", "P2", "P4", "P3", "P6", "P4", "P5", "P2", "P4", "P1", "P6", "P6", "P4", "P2", "P2", "P1", "P4", "P1", "P5", "P1", "P1", "P5", "P1", "P4", "P6", "P3", "P2", "P1", "P5", "P6", "P2", "CP", "CP", "P5", "P4", "P1" ],
+        [ "P6", "P5", "P4", "P3", "P4", "P6", "P6", "CP", "P5", "P3", "P4", "P6", "WILD", "P5", "P3", "P5", "CP", "P6", "P5", "P3", "WILD", "P4", "P5", "P2", "P5", "P3", "P4", "P4", "P5", "P1", "P3", "P5", "P2", "P4", "P6", "P6", "P4", "P2", "CP", "P5", "P2", "P6", "P2", "P3", "P5", "P1", "P3", "P1", "CP", "P6", "CP", "P3", "P4", "P6", "P2", "P3", "P2", "P3", "P6", "P4", "P3", "P2", "P1", "P5", "P2", "P4", "P2", "P5", "P1", "P4", "P4", "P1", "CP", "CP", "P6", "P4", "P6", "CP", "P4" ],
+        [ "P5", "P3", "CP", "CP", "P6", "CP", "P6", "P3", "WILD", "P5", "P4", "P6", "P6", "P2", "P5", "P1", "SCAT", "P6", "P5", "P5", "P6", "P4", "SCAT", "P3", "P5", "P2", "P6", "SCAT", "CP", "CP", "P2", "WILD", "P4", "P6", "P5", "P1", "P4", "P5", "P6", "P6", "CP", "CP", "P3", "P2", "P5", "SCAT", "P3", "P6", "P2", "WILD", "P3", "P2", "P6", "P6", "P4", "CP", "P2", "P5", "P1", "SCAT", "P3", "P4", "P6", "P1", "CP", "CP", "P4", "P6", "P4", "P1", "P6", "P5", "P2", "P4", "P4", "P5", "P1", "P3", "P4", "CP", "CP", "P5", "P1", "P3", "P4", "P3" ],
+        [ "P6", "P5", "P4", "WILD", "P3", "P3", "P6", "P2", "CP", "CP", "P5", "P6", "P6", "P3", "P4", "P6", "P5", "P3", "P5","P2", "P5", "P3", "P4", "P5", "P6", "P5", "P1", "WILD", "P4", "P4", "P5", "P3", "P1", "P5", "P6", "P4", "P4", "P6", "CP", "P5", "P2", "P2", "P3", "P5", "P3", "P3", "P1", "CP", "CP", "P3", "P4", "P6", "P2", "P3", "P2", "P3", "P6", "P4", "P3", "P2", "P1", "P5", "P2", "P4", "P2", "P5", "P1", "P4", "P4", "P1", "P6", "P4", "P6", "CP", "CP", "P4" ],
+        [ "P6", "P6", "P5", "P3", "WILD", "P6", "P1", "P6", "P5", "P4", "P2", "P5", "WILD", "P6", "P1", "P5", "P5", "P6", "P4", "P3", "P5", "P2", "SCAT", "CP", "CP", "P6", "P6", "P2", "P4", "P5", "P1", "P4", "P5", "CP", "WILD", "P6", "CP", "P3", "P2", "P5", "P3", "SCAT", "P2", "P3", "P2", "WILD", "P4", "P2", "SCAT", "P5", "P1", "P3", "P4", "P6", "P1", "CP", "CP", "P4", "P6", "P4", "P1", "P6", "P5", "P2", "P4", "P4", "P5", "P1", "P3", "P4", "CP", "CP", "P5", "P1", "P3", "P4", "P3" ]
         ]
       },
       {
-        "weight": 20,
+        "weight": 115,
         "reels": [
-          ["A", "A", "B", "W", "C"],
-          ["B", "B", "C", "W", "A"],
-          ["C", "C", "A", "W", "B"],
-          ["B", "B", "C", "W", "A"],
-          ["C", "C", "A", "W", "B"]
+        [ "P4", "P5", "SCAT", "P6", "P3", "P1", "SCAT", "P4", "P5", "P5", "P6", "P5", "SCAT", "P6", "P6", "P5", "P3", "P5", "P4", "SCAT", "P6", "P3", "P6", "P3", "P4", "P5", "P2", "SCAT", "P6", "P5", "CP", "P6", "P3", "P4", "P3", "P3", "CP", "P4", "P2", "P5", "P6", "CP", "P5", "P6", "P2", "P4", "P3", "SCAT", "P6", "P5", "P2", "P5", "P6", "P6", "P4", "P2", "P2", "P4", "P4", "P1", "P5", "P1", "P1", "SCAT", "P5", "P1", "P4", "P6", "P4", "P2", "P1", "SCAT", "P5", "P6", "P2", "CP", "P5", "P4", "P1" ],
+        [ "P6", "P5", "P4", "P1", "P3", "P6", "P6", "P5", "P3", "P4", "P6", "WILD", "P5", "P3", "P5", "CP", "P6", "P5", "P3", "WILD", "P4", "P5", "P2", "P5", "P1", "P4", "P4", "P5", "P3", "P3", "P5", "P2", "P4", "P6", "P6", "P4", "P2", "P5", "P2", "P6", "P2", "P3", "P5", "P3", "P3", "P1", "P6", "P3", "P4", "P6", "P2", "P1", "P3", "P2", "P3", "P6", "P4", "P3", "P2", "P1", "P5", "P2", "P4", "P2", "P5", "P1", "P4", "P4", "P1", "CP", "P6", "P4", "P6", "CP", "P4" ],
+        [ "P5", "P3", "CP", "P6", "SCAT", "P6", "P3", "WILD", "P5", "P4", "P6", "P6", "P2", "P5", "P1", "SCAT", "P6", "P5", "P5", "P6", "P4", "SCAT", "P3", "P5", "P2", "P6", "SCAT", "P2", "WILD", "P4", "P6", "P5", "P1", "P4", "P5", "P6", "P6", "CP", "P3", "P2", "P5", "SCAT", "P3", "P6", "P2", "WILD", "P3", "P2", "P6", "P6", "SCAT", "P4", "CP", "P2", "P5", "P1", "SCAT", "P3", "P4", "P6", "P1", "P4", "SCAT", "P6", "P4", "P1", "P6", "P5", "P2", "P4", "P4", "P5", "P1", "P3", "P4", "P5", "P1", "P3", "P4", "P3" ],
+        [ "P6", "P5", "P4", "WILD", "P3", "P3", "P6", "WILD", "P2", "P5", "P6", "P6", "P3", "P4", "P6", "P5", "P1", "P5","P2", "P5", "P3", "P4", "P5", "P6", "P5", "P3", "WILD", "P4", "P4", "P5", "P1", "P3", "P5", "P6", "P4", "P4", "P6", "P5", "P2", "P2", "P3", "P5", "P3", "P3", "P1", "CP", "CP", "P3", "P4", "P6", "P2", "P3", "P2", "P3", "P6", "P4", "P3", "P2", "P1", "P5", "P2", "P4", "P2", "P5", "P1", "P4", "P4", "P1", "CP", "P6", "P4", "P6", "CP", "P4" ],
+        [ "P6", "P6", "P5", "P3", "WILD", "CP", "P6", "P3", "P6", "SCAT", "P5", "P4", "P2", "P5", "WILD", "P6", "P1", "P5", "P5", "P6", "P4", "P3", "P5", "P2", "SCAT", "P1", "P6", "P6", "P2", "P4", "P5", "P1", "P4", "P5", "CP", "WILD", "P6", "CP", "P3", "P2", "P5", "P3", "SCAT", "P2", "P3", "P2", "WILD", "P4", "CP", "P2", "SCAT", "P5", "P1", "P3", "P4", "P6", "P1", "CP", "SCAT", "P4", "WILD", "P6", "P4", "SCAT", "P1", "P6", "P5", "P2", "P4", "SCAT", "P4", "P5", "P1", "P3", "SCAT", "P4", "CP", "P5", "P1", "P3", "P4", "P3" ]
         ]
-      }
-    ],
-
-    "paylines": [
-      [0, 0, 0, 0, 0],
-      [1, 1, 1, 1, 1],
-      [2, 2, 2, 2, 2]
-    ],
-
-    "paytable": {
-      "A": { "3": 10, "4": 20, "5": 50 },
-      "B": { "3": 5, "4": 10, "5": 25 },
-      "C": { "3": 2, "4": 5, "5": 10 },
-      "W": { "3": 20, "4": 40, "5": 100 },
-      "S": { 
-        "3": {
-          "payout": 0,
-          "triggers": {
-            "name": "freespins",
-            "count": 3
-          }
-        },
-        "4": {
-          "payout": 0,
-          "triggers": {
-            "name": "freespins",
-            "count": 5
-          }
-        }
-      }
-    },
-    "window_height": 3
-  },
-  "freespins": {
-    "symbols": {
-      "A": { "is_wild": false, "is_scatter": false },
-      "B": { "is_wild": false, "is_scatter": false },
-      "C": { "is_wild": false, "is_scatter": false },
-      "W": { "is_wild": true, "is_scatter": false },
-      "CP": { "is_wild": false, "is_scatter": false },
-      "S": { "is_wild": false, "is_scatter": true}
-    },
-
-    "reel_sets": [
+      },
       {
         "weight": 0,
         "reels": [
-          ["A", "CP", "CP", "CP", "A", "A"],
-          ["W", "W", "CP", "CP", "CP", "W"],
-          ["CP", "CP", "CP", "W", "CP", "A"],
-          ["W", "W", "CP", "CP", "CP", "W"],
-          ["CP", "CP", "CP", "W", "CP", "A"]
-        ]
-      },
-      {
-        "weight": 20,
-        "reels": [
-          ["A", "S", "B", "W", "A", "A", "C"],
-          ["B", "S", "C", "W", "A", "A", "B"],
-          ["C", "S", "A", "A", "A", "W", "B", "A", "A", "A", "W", "B"],
-          ["S", "W", "CP", "CP", "W", "B", "A"],
-          ["CP", "CP", "CP", "W", "CP", "A"]
+        [ "SCAT", "P4", "P1" ],
+        [ "SCAT", "CP", "P4" ],
+        [ "SCAT", "P4", "P3" ],
+        [ "P2", "P1", "P2" ],
+        [ "P3", "P2", "P1" ]
         ]
       }
     ],
 
     "paylines": [
-      [0, 0, 0, 0, 0],
       [1, 1, 1, 1, 1],
-      [2, 2, 2, 2, 2]
+      [0, 0, 0, 0, 0],
+      [2, 2, 2, 2, 2],
+      [0, 1, 2, 1, 0],
+      [2, 1, 0, 1, 2],
+      [0, 0, 1, 0, 0],
+      [2, 2, 1, 2, 2],
+      [1, 2, 2, 2, 1],
+      [1, 0, 0, 0, 1],
+      [0, 1, 1, 1, 0],
+      [2, 1, 1, 1, 2],
+      [0, 1, 0, 1, 0],
+      [2, 1, 2, 1, 2],
+      [1, 0, 1, 0, 1],
+      [1, 2, 1, 2, 1],
+      [1, 1, 0, 1, 1],
+      [1, 1, 2, 1, 1],
+      [0, 2, 0, 2, 0],
+      [2, 0, 2, 0, 2],
+      [1, 0, 2, 0, 1]
     ],
 
     "paytable": {
-      "A": { "3": 10 },
-      "B": { "3": 5 },
-      "C": { "3": 2 },
-      "W": { "3": 20 },
-      "S": { 
-        "3": {
-          "payout": 0,
-          "triggers": {
-            "name": "freespins",
-            "count": 3
-          }
-        },
-        "4": {
-          "payout": 0,
-          "triggers": {
-            "name": "freespins",
-            "count": 5
-          }
-        }
+      "P1": { "3": 50, "4": 200, "5": 1000 },
+      "P2": { "3": 20, "4": 100, "5": 500 },
+      "P3": { "3": 10, "4": 50, "5": 250 },
+      "P4": { "3": 5, "4": 25, "5": 100 },
+      "P5": { "3": 5, "4": 25, "5": 100 },
+      "P6": { "3": 5, "4": 25, "5": 100 },
+      "SCAT": {
+        "3": { "payout": 0, "triggers": { "name": "freespins", "count": 5 } }
+      }
+    },
+    "window_height": 3,
+    "customParameters":{
+      "bonusSymbol":"CP",
+      "threshold": 5,
+      "CPWeights": {
+        "0.2": 30000,
+        "0.5": 10000,
+        "1": 8000,
+        "2": 2500,
+        "3": 2000,
+        "5": 1000,
+        "10": 500,
+        "25": 200,
+        "50": 100,
+        "100": 10
+      }
+    }
+  },
+  "freespins": {
+    "symbols": {
+      "P1": { "is_wild": false, "is_scatter": false },
+      "P2": { "is_wild": false, "is_scatter": false },
+      "P3": { "is_wild": false, "is_scatter": false },
+      "P4": { "is_wild": false, "is_scatter": false },
+      "P5": { "is_wild": false, "is_scatter": false },
+      "P6": { "is_wild": false, "is_scatter": false },
+      "CP": { "is_wild": false, "is_scatter": false },
+      "WILD": { "is_wild": true, "is_scatter": false },
+      "SCAT": { "is_wild": false, "is_scatter": true },
+      "BLANK": { "is_wild": false, "is_scatter": false }
+    },
+
+    "reel_sets": [
+      {
+        "weight": 1,
+        "reels": [
+          [ "BLANK", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "BLANK", "BLANK", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "BLANK", "BLANK", "CP", "CP", "BLANK", "CP", "CP", "BLANK", "BLANK", "CP", "BLANK", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "CP", "BLANK", "BLANK" ],
+          [ "BLANK", "CP", "BLANK", "CP", "CP", "CP", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "BLANK", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "CP", "BLANK", "CP", "BLANK", "BLANK", "CP", "CP", "CP", "BLANK", "BLANK", "CP", "CP", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "CP", "BLANK", "CP" ],
+          [ "BLANK", "CP", "CP", "CP", "BLANK", "CP", "BLANK", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "BLANK", "BLANK", "BLANK", "CP", "BLANK", "CP", "CP", "BLANK", "BLANK", "CP", "BLANK", "BLANK", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "CP", "BLANK", "BLANK" ],
+          [ "BLANK", "BLANK", "CP", "CP", "CP", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "CP", "CP", "BLANK", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "BLANK", "BLANK", "CP", "BLANK", "BLANK", "CP", "BLANK", "BLANK", "CP", "CP", "BLANK", "BLANK", "BLANK", "CP", "CP", "CP", "BLANK", "BLANK", "CP", "CP", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "CP", "BLANK", "CP" ],
+          [ "BLANK", "CP", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "CP", "BLANK", "CP", "CP", "BLANK", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "CP", "BLANK", "BLANK", "CP", "BLANK", "BLANK", "CP", "CP", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "BLANK", "CP", "CP", "BLANK", "BLANK" ]
+        ]
+      }
+    ],
+
+    "paylines": [
+      [1, 1, 1, 1, 1],
+      [0, 0, 0, 0, 0],
+      [2, 2, 2, 2, 2],
+      [0, 1, 2, 1, 0],
+      [2, 1, 0, 1, 2],
+      [0, 0, 1, 0, 0],
+      [2, 2, 1, 2, 2],
+      [1, 2, 2, 2, 1],
+      [1, 0, 0, 0, 1],
+      [0, 1, 1, 1, 0],
+      [2, 1, 1, 1, 2],
+      [0, 1, 0, 1, 0],
+      [2, 1, 2, 1, 2],
+      [1, 0, 1, 0, 1],
+      [1, 2, 1, 2, 1],
+      [1, 1, 0, 1, 1],
+      [1, 1, 2, 1, 1],
+      [0, 2, 0, 2, 0],
+      [2, 0, 2, 0, 2],
+      [1, 0, 2, 0, 1]
+    ],
+
+   "paytable": {
+      "P1": { "3": 50, "4": 200, "5": 1000 },
+      "P2": { "3": 20, "4": 100, "5": 500 },
+      "P3": { "3": 10, "4": 50, "5": 250 },
+      "P4": { "3": 5, "4": 25, "5": 100 },
+      "P5": { "3": 5, "4": 25, "5": 100 },
+      "P6": { "3": 5, "4": 25, "5": 100 },
+      "SCAT": {
+        "3": { "payout": 0, "triggers": { "name": "freespins", "count": 3 } },
+        "4": { "payout": 0, "triggers": { "name": "freespins", "count": 5 } },
+        "5": { "payout": 0, "triggers": { "name": "freespins", "count": 7 } }
       }
     },
 
@@ -128,12 +166,16 @@
       "bonusSymbol":"CP",
       "threshold": 5,
       "CPWeights": {
-        "1": 10,
-        "2": 10,
-        "3": 15,
-        "5": 5,
-        "10": 5,
-        "100":1
+        "0.2": 0,
+        "0.5": 20000,
+        "1": 8000,
+        "2": 2500,
+        "3": 2000,
+        "5": 1000,
+        "10": 500,
+        "25": 200,
+        "50": 100,
+        "100": 10
       }
     }
   }
