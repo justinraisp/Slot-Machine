@@ -151,7 +151,7 @@ def run_simulation(total_games, bet_amount, num_cores=1, existing_filename=None)
 
 if __name__ == "__main__":
     # Za novo simulacijo:
-    run_simulation(total_games=6000000, num_cores=6, bet_amount=1.0)
+    #run_simulation(total_games=5000000, num_cores=6, bet_amount=1.0)
     
     # Za nadaljevanje obstoječe:
-    #run_simulation(total_games=1000000, bet_amount=1.0, existing_filename="simulacija_20240520_120000.json")
+    run_simulation(total_games=1000000, bet_amount=1.0, existing_filename="simulacija_20260118_224859_RTP_1000000.json")
