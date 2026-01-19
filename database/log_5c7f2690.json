@@ -1,0 +1,51 @@
+{
+  "session_id": "5c7f2690-527f-43a8-a916-08469e5ff27d",
+  "timestamp": "2026-01-19T22:46:02.536356",
+  "bet": 1.0,
+  "base_win": 0.0,
+  "bonus_win": 0.0,
+  "total_payout": 0.0,
+  "spins": [
+    {
+      "state": "base",
+      "window": [
+        [
+          "P6",
+          "P5",
+          "P5",
+          "P6",
+          "P5"
+        ],
+        [
+          "P4",
+          "P2",
+          "P3",
+          "P2",
+          "P1"
+        ],
+        [
+          "P5",
+          "P4",
+          "CP_0.2",
+          "P3",
+          "P4"
+        ]
+      ],
+      "payout": 0.0,
+      "wins": [],
+      "bonus_triggered": null
+    }
+  ],
+  "wins_by_symbol": {
+    "P1": 0.0,
+    "P2": 0.0,
+    "P3": 0.0,
+    "P4": 0.0,
+    "P5": 0.0,
+    "P6": 0.0,
+    "CP": 0.0,
+    "WILD": 0.0,
+    "SCAT": 0.0
+  },
+  "total_freespins_played": 0
+}

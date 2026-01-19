@@ -1,0 +1,23 @@
+SLOT MACHINE – GAME RULES
+
+BASE GAME
+- Grid layout: 3 rows x 5 reels
+- 20 fixed paylines
+- All paylines pay from LEFT to RIGHT
+- Wins are multiplied by the current bet
+
+SYMBOLS
+- P1 – P6 : Regular paying symbols
+- WILD    : Substitutes for all regular symbols (except SCATTER and CASHPOT)
+- SCATTER : Triggers Free Spins bonus
+- CASHPOT : During any spin, one or more Cashpot symbols may appear on the reels. Each Cashpot symbol value may range from x0.2 to x100 of the total bet amount. 5 or more Cashpot symbols need to appear and the sum of wins will be rewarded.
+
+SCATTER & FREE SPINS
+- 3 SCATTER symbols trigger 5 FREE SPINS.
+- CASHPOT symbols appear during Free Spins.
+- If 5+ CASHPOT symbols appear, the total value is paid.
+- Free Spins can be retriggered.
+
+GENERAL NOTES
+- All payouts are multiplied by the current bet.
+- Faulty play voids all pays and plays.
