@@ -74,12 +74,10 @@ def spin_machine(machine: SlotMachine, config: dict, bet: float, save_log: bool 
     update_machine_config("base")
 
     def single_spin():
-        # Uporabimo nonlocal, da lahko pišemo v spremenljivko izven te funkcije
         nonlocal first_window_matrix 
         
         window = machine.getSymbolWindow()
         
-        # Če je to prvi spin v tej seji, si zapomnimo mrežo za UI
         if first_window_matrix is None:
             first_window_matrix = window.getMatrix()
 
@@ -168,7 +166,6 @@ def main():
         return
 
     BET_AMOUNT = 1.0
-    # Inicializacija z dummy reel_sets, ki se bodo naložili v spin_machine
     machine = SlotMachine(reel_sets=[], window_height=config["base"]["window_height"])
     
     outcome, session_id = spin_machine(machine, config, BET_AMOUNT, save_log=True)

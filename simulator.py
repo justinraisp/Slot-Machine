@@ -78,11 +78,9 @@ def run_simulation(total_games, bet_amount, num_cores=1, existing_filename=None)
         with open(abs_path, "r", encoding='utf-8') as f:
             data = json.load(f)
             
-            # Če je datoteka nova (combined), vzamemo samo history del
             if isinstance(data, dict) and "history" in data:
                 history = data["history"]
             else:
-                # Če je stara datoteka, so podatki direktno v korenu
                 history = data
     else:
         print(f"Ustvarjam novo simulacijo: {abs_path}")
@@ -132,6 +130,8 @@ def run_simulation(total_games, bet_amount, num_cores=1, existing_filename=None)
         "standard_deviation": round(std_dev, 5),
         "bonus_trigger_frequency": round((history['bonus_triggers'] / n), 5),
         "bonus_trigger_hitrate": f"1 in {round(n / max(1, history['bonus_triggers']), 2)}",
+        "base_payout_rtp": to_rtp(history['base_payout']),
+        "bonus_payout_rtp": to_rtp(history['bonus_payout']),
         "symbol_payouts_rtp": {sym: to_rtp(val) for sym, val in history["symbol_payouts"].items()},
         "confidence_interval 95%": [lower, upper]
     }
