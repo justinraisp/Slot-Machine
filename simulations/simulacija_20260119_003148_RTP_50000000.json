@@ -1,0 +1,50 @@
+{
+    "history": {
+        "total_games": 400000008,
+        "total_bet": 400000008.0,
+        "total_payout": 384195869.8998973,
+        "base_payout": 253419053.39996272,
+        "bonus_payout": 130776816.5,
+        "bonus_triggers": 4410160,
+        "winning_spins": 156493026,
+        "sum_payout_squares": 8232540390.32848,
+        "symbol_payouts": {
+            "P1": 38536262.5,
+            "P2": 35581400.0,
+            "P3": 34943880.0,
+            "P4": 32598897.0,
+            "P5": 33142132.25,
+            "P6": 36318965.75,
+            "CP": 173074332.40002194,
+            "WILD": 0.0,
+            "SCAT": 0.0
+        }
+    },
+    "report": {
+        "timestamp_last_update": "2026-01-19 22:37:44",
+        "total_games": 400000008,
+        "total_bet": 400000008.0,
+        "total_payout_rtp": 0.96049,
+        "hit_frequency": 0.39123,
+        "standard_deviation": 4.43383,
+        "bonus_trigger_frequency": 0.01103,
+        "bonus_trigger_hitrate": "1 in 90.7",
+        "base_payout_rtp": 0.63355,
+        "bonus_payout_rtp": 0.32694,
+        "symbol_payouts_rtp": {
+            "P1": 0.09634,
+            "P2": 0.08895,
+            "P3": 0.08736,
+            "P4": 0.0815,
+            "P5": 0.08286,
+            "P6": 0.0908,
+            "CP": 0.43269,
+            "WILD": 0.0,
+            "SCAT": 0.0
+        },
+        "confidence_interval 95%": [
+            0.9600551406,
+            0.9609241705
+        ]
+    }
+}
