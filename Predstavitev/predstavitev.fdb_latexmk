@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1768861514 "c:/Users/Justin/ISRM/MZR/Slot-Machine/Predstavitev/predstavitev.tex" "predstavitev.pdf" "predstavitev" 1768861517 0
+["pdflatex"] 1768861741 "c:/Users/Justin/ISRM/MZR/Slot-Machine/Predstavitev/predstavitev.tex" "predstavitev.pdf" "predstavitev" 1768861744 0
   "C:/Users/Justin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747574491 224765 d98607679618341c78ea3351153c9459 ""
   "C:/Users/Justin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1677316351 10788482 66306c7377e0de2c9e7d5523ce165913 ""
   "C:/Users/Justin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -28,8 +28,8 @@
   "C:/Users/Justin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb" 1247596667 24420 52dbb8e8aa0069a1b987309557f8d303 ""
   "C:/Users/Justin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb" 1247596666 28902 2f5c04fd2884d1878057baa5aad22765 ""
   "C:/Users/Justin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb" 1247596666 25150 e0d09798d232ab9d00c5c0a8df6cc22d ""
-  "C:/Users/Justin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb" 1247596667 25168 c89d909bac101e478326bb9e00519ca3 ""
   "C:/Users/Justin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/Justin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Users/Justin/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/Justin/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "C:/Users/Justin/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
@@ -201,11 +201,11 @@
   "Figures/izplacilo.png" 1768859841 184945 ae1572c966cbeddcea44d27f3dbef2ef ""
   "Figures/izplacilo0.png" 1768859925 180363 a15bff3f65b14061ea0b5cf8f9140738 ""
   "Figures/izracun.png" 1768860817 41964 4a160571465ad40daa549ac521df850b ""
-  "c:/Users/Justin/ISRM/MZR/Slot-Machine/Predstavitev/predstavitev.tex" 1768861513 5004 2418caf7c1ddf4f53d476652095d127c ""
-  "predstavitev.aux" 1768861517 2114 a4a09d176936fbbefbc3e2366b47c2bc "pdflatex"
-  "predstavitev.nav" 1768861517 1109 07396102f9d82bf25877ba7d82798efb "pdflatex"
-  "predstavitev.out" 1768861516 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "predstavitev.tex" 1768861513 5004 2418caf7c1ddf4f53d476652095d127c ""
+  "c:/Users/Justin/ISRM/MZR/Slot-Machine/Predstavitev/predstavitev.tex" 1768861740 5011 b00e3724d4a12a18c42e7ddbe599cab2 ""
+  "predstavitev.aux" 1768861743 2114 a4a09d176936fbbefbc3e2366b47c2bc "pdflatex"
+  "predstavitev.nav" 1768861743 1109 07396102f9d82bf25877ba7d82798efb "pdflatex"
+  "predstavitev.out" 1768861743 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "predstavitev.tex" 1768861740 5011 b00e3724d4a12a18c42e7ddbe599cab2 ""
   (generated)
   "predstavitev.aux"
   "predstavitev.log"
