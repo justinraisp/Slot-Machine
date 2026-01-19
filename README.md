@@ -47,8 +47,8 @@ Slot-Machine/
 ## How to use
 - Step 1: Prerequisites
   - Ensure you have Python 3.x installed on your system.
-  - Install the 'Pillow' library (required for images in GUI):
-    Command: pip install Pillow
+  - Install the 'Pillow' library
+  - Install the tkinter library
 
 - Step 2: Running from terminal
   - To play a single spin in the terminal:
