@@ -64,7 +64,7 @@ Slot-Machine/
     Command: python simulator.py
   - Results are saved in the '/simulations' folder.
 
-- Step 5: Customization
+- Step 4: Customization
   - Open 'config.json' to modify symbol weights, payout values, 
     or payline patterns. The game will update automatically 
     on the next run.
