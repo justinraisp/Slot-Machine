@@ -47,8 +47,8 @@ Slot-Machine/
 ## How to use
 - Step 1: Prerequisites
   - Ensure you have Python 3.x installed on your system.
-  - Install the 'Pillow' library (required for images in GUI):
-    Command: pip install Pillow
+  - Install the 'Pillow' library
+  - Install the tkinter library
 
 - Step 2: Running from terminal
   - To play a single spin in the terminal:
@@ -64,7 +64,7 @@ Slot-Machine/
     Command: python simulator.py
   - Results are saved in the '/simulations' folder.
 
-- Step 5: Customization
+- Step 4: Customization
   - Open 'config.json' to modify symbol weights, payout values, 
     or payline patterns. The game will update automatically 
     on the next run.
