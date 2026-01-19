@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1768861136 "c:/Users/Justin/ISRM/MZR/Slot-Machine/Predstavitev/predstavitev.tex" "predstavitev.pdf" "predstavitev" 1768861139 0
+["pdflatex"] 1768861514 "c:/Users/Justin/ISRM/MZR/Slot-Machine/Predstavitev/predstavitev.tex" "predstavitev.pdf" "predstavitev" 1768861517 0
   "C:/Users/Justin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747574491 224765 d98607679618341c78ea3351153c9459 ""
   "C:/Users/Justin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1677316351 10788482 66306c7377e0de2c9e7d5523ce165913 ""
   "C:/Users/Justin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -201,11 +201,11 @@
   "Figures/izplacilo.png" 1768859841 184945 ae1572c966cbeddcea44d27f3dbef2ef ""
   "Figures/izplacilo0.png" 1768859925 180363 a15bff3f65b14061ea0b5cf8f9140738 ""
   "Figures/izracun.png" 1768860817 41964 4a160571465ad40daa549ac521df850b ""
-  "c:/Users/Justin/ISRM/MZR/Slot-Machine/Predstavitev/predstavitev.tex" 1768861135 5027 b5e22bad866126db9ea871d779aa55db ""
-  "predstavitev.aux" 1768861139 2114 a4a09d176936fbbefbc3e2366b47c2bc "pdflatex"
-  "predstavitev.nav" 1768861139 1109 07396102f9d82bf25877ba7d82798efb "pdflatex"
-  "predstavitev.out" 1768861138 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "predstavitev.tex" 1768861135 5027 b5e22bad866126db9ea871d779aa55db ""
+  "c:/Users/Justin/ISRM/MZR/Slot-Machine/Predstavitev/predstavitev.tex" 1768861513 5004 2418caf7c1ddf4f53d476652095d127c ""
+  "predstavitev.aux" 1768861517 2114 a4a09d176936fbbefbc3e2366b47c2bc "pdflatex"
+  "predstavitev.nav" 1768861517 1109 07396102f9d82bf25877ba7d82798efb "pdflatex"
+  "predstavitev.out" 1768861516 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "predstavitev.tex" 1768861513 5004 2418caf7c1ddf4f53d476652095d127c ""
   (generated)
   "predstavitev.aux"
   "predstavitev.log"
