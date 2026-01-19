@@ -1,0 +1,120 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+\title{Igra na srečo: Igralni avtomat}
+\subtitle{Projektna naloga pri predmetu Matematika z računalnikom}
+\author{Justin Raišp}
+\date{20. januar 2026}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Koncept in ideja}
+    Cilj projekta je bila izdelava funkcionalnega digitalnega igralnega avtomata, ki združuje:
+    \begin{itemize}
+        \item \textbf{Matematično ozadje:} Izračun verjetnosti in donosa,
+        \item \textbf{Simulacijo:} Preverjanje teoretičnih izračunov z velikim številom vrtljajev,
+        \item \textbf{Uporabniški vmesnik:} Dinamičen prikaz igre v Pythonu.
+    \end{itemize}
+\end{frame}
+\begin{frame}{Pravila igre in mehanika izplačil}
+    \textbf{Osnovna pravila:}
+    \begin{itemize}
+        \item Igra poteka na mreži $3 \times 5$ z 20 plačilnimi linijami.
+        \item Dobitne kombinacije se štejejo izključno od leve proti desni, začenši s prvim kolutom.
+        \item Izplačila se izračunajo kot $\frac{\text{Stava}x\text{Množitelj simbola}}{\text{Število plačilnih linij}}$
+    \end{itemize}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.42\textwidth]{Figures/izplacilo0.png}
+        \caption{Primer dobitne linije s tremi simboli.}
+    \end{figure}
+\end{frame}
+\begin{frame}{Posebni simboli in izračun dobitkov}
+    \textbf{Posebni simboli:}
+    \begin{itemize}
+        \item \textbf{Wild:} Nadomešča vse simbole, razen scatter in cashpot, za sestavo najboljše kombinacije.
+        \item \textbf{Cashpot:} Posebni simboli z naključnimi vrednostmi od 0,2 do 100, katerih vsota se izplača le v primeru, ko jih je 5 ali več. Izplačajo večkratnik celotne stave,
+        \item \textbf{Scatter:} 3 ali več simboli kjerkoli na zaslonu sprožijo bonus igro s \textbf{5 brezplačnimi vrtljaji}, kjer nastopajo le cashpot simboli,
+    \end{itemize}
+\end{frame}
+\begin{frame}
+    \begin{figure}
+        \centering
+          \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Figures/izplacilo.png}
+            \caption{Dobitna linija z Wild simbolom.}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Figures/casshpot.png}
+            \caption{Dobitek s Cashpot simboli.}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+\begin{frame}{Matematični izračuni}
+    \textbf{Return to Player (RTP)} je statistična mera, ki izraža odstotek celotnega vplačanega zneska, ki ga igralni avtomat dolgoročno izplača igralcem.
+    
+    \vfill
+    \textbf{Matematična formula:}
+    $$ RTP = \frac{\sum \text{Dobitki}}{\sum \text{Vplačila}} \times 100 \% $$
+    Pred programiranjem je bilo treba določiti matematični model v Excelu:
+    \begin{itemize}
+        \item \textbf{Vrednosti simbolov:} Določiti porazdelitve izplačil posameznih simbolov,
+        \item Pripraviti dva različna \textbf{reelset-a}, enega z višjim in drugega z nižjim RTP ter ju ustrezno utežiti,
+        \item Pripraviti porazdelitev večkratnikov za cashpot simbole,
+        \item Ustrezno pripraviti izplačila v bonus igri.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}
+      \centering
+      \includegraphics[width=1\textwidth]{Figures/izracun.png}
+      \caption{Primer izračuna v Excelu.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Simulacije}
+    \begin{itemize}
+        \item Izvedba \textbf{400 000 000} avtomatiziranih vrtljajev.
+        \item \textbf{Analiza rezultatov:}
+            \begin{itemize}
+                \item Primerjava dejanskega RTP s teoretičnim,
+                \item Preverjanje delež izplačila po posameznih simbolih,
+                \item Preverjanje pogostosti bonus igre in izplačila le te.
+            \end{itemize}
+    \end{itemize}
+    S pomočjo Studentove porazdelitve sem dobil 95\% interval zapupanja in s tem potrdil izračune.
+\end{frame}
+
+
+\begin{frame}{Uporabniški vmesnik}
+    Vmesnik je zasnovan v knjižnici \textbf{Tkinter} in vključuje:
+    \begin{itemize}
+        \item \textbf{Glavno mrežo:} dinamično osveževanje slik simbolov,
+        \item \textbf{Interaktivne elemente:} gumbi za stavo, vrtenje in info stran,
+        \item \textbf{Info stran:} tabela dobitkov in prikaz 20 plačilnih linij.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Zaključek}
+    Projekt uspešno združuje matematično teorijo verjetnosti s praktično uporabo v programiranju. 
+    
+    \vfil
+    \textbf{Glavna spoznanja:}
+    \begin{itemize}
+        \item Način računanja verjetnosti in izplačil v igralnih avtomatih s pomočjo excela,
+        \item Uporaba simulacij za potrjevanje teoretičnih modelov,
+        \item Ustvarjanje intuitivnega grafičnega vmesnika za boljšo uporabniško izkušnjo.
+    \end{itemize}
+\end{frame}
+
+\end{document}
