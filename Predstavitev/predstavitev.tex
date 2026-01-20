@@ -5,7 +5,7 @@
 
 \title{Igra na srečo: Igralni avtomat}
 \subtitle{Projektna naloga pri predmetu Matematika z računalnikom}
-\author{Justin Raišp}
+\author{Justin Raišp \\ {\small Mentor: Matej Rojec}}
 \date{20. januar 2026}
 
 \begin{document}
@@ -59,6 +59,23 @@
         \end{minipage}
     \end{figure}
 \end{frame}
+\begin{frame}
+    \begin{figure}
+        \centering
+          \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Figures/trigger.png}
+            \caption{Dobljeni bonus s 3 scatter simboli.}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Figures/freespins.png}
+            \caption{Primer vrtljaja v bonus igri.}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
 \begin{frame}{Matematični izračuni}
     \textbf{Return to Player (RTP)} je statistična mera, ki izraža odstotek celotnega vplačanega zneska, ki ga igralni avtomat dolgoročno izplača igralcem.
     
@@ -92,7 +109,9 @@
                 \item Preverjanje pogostosti bonus igre in izplačila le te.
             \end{itemize}
     \end{itemize}
-    S pomočjo Studentove porazdelitve sem dobil 95\% interval zapupanja in s tem potrdil izračune.
+    Studentova porazdelitev: $\frac{\bar{X}-\mu}{S/\sqrt{n}}$
+    \\
+    95\% interval zaupanja: $\left[\bar{x} -\frac{c \cdot S}{\sqrt{n}}, \bar{x} +\frac{c \cdot S}{\sqrt{n}}\right],$ kjer $c \approx 1.96.$
 \end{frame}
 
 

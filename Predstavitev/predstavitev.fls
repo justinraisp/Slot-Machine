@@ -1253,6 +1253,7 @@ INPUT .\predstavitev.nav
 INPUT predstavitev.nav
 INPUT predstavitev.nav
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
+INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss12.tfm
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
@@ -1295,7 +1296,6 @@ INPUT .\Figures\izplacilo0.png
 INPUT .\Figures\izplacilo0.png
 INPUT .\Figures\izplacilo0.png
 INPUT .\Figures\izplacilo0.png
-INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
 INPUT .\Figures\izplacilo.png
 INPUT .\Figures\izplacilo.png
 INPUT Figures\izplacilo.png
@@ -1310,6 +1310,20 @@ INPUT .\Figures\casshpot.png
 INPUT .\Figures\casshpot.png
 INPUT .\Figures\casshpot.png
 INPUT .\Figures\casshpot.png
+INPUT .\Figures\trigger.png
+INPUT .\Figures\trigger.png
+INPUT Figures\trigger.png
+INPUT .\Figures\trigger.png
+INPUT .\Figures\trigger.png
+INPUT .\Figures\trigger.png
+INPUT .\Figures\trigger.png
+INPUT .\Figures\freespins.png
+INPUT .\Figures\freespins.png
+INPUT Figures\freespins.png
+INPUT .\Figures\freespins.png
+INPUT .\Figures\freespins.png
+INPUT .\Figures\freespins.png
+INPUT .\Figures\freespins.png
 INPUT .\Figures\izracun.png
 INPUT .\Figures\izracun.png
 INPUT Figures\izracun.png
@@ -1325,6 +1339,10 @@ INPUT .\predstavitev.out
 INPUT .\predstavitev.out
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
@@ -1335,6 +1353,8 @@ INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssbx10.pfb
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi10.pfb
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi10.pfb
+INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi8.pfb
+INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi8.pfb
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Justin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
